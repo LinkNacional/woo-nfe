@@ -104,12 +104,6 @@ class NFe_APIRequest extends NFe_Object {
 
         curl_setopt_array($curl, $opts);
 
-        // For debugging
-        if (NFe_io::$debug == true) {
-            curl_setopt($curl, CURLOPT_PROXY, '127.0.0.1:8888');
-            curl_setopt($curl, CURLOPT_VERBOSE, 1);
-        }
-
         $response = curl_exec($curl);
 
         if (!defined('CURLE_SSL_CACERT_BADFILE')) {
