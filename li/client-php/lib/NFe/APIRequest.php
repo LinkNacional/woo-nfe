@@ -138,7 +138,6 @@ class NFe_APIRequest extends NFe_Object {
         if ($response === false) {
             $errno = curl_errno($curl);
             $message = curl_error($curl);
-            curl_close($curl);
             $this->handleCurlError($url, $errno, $message);
 
             //logs para monitoração

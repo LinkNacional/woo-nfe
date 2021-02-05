@@ -53,6 +53,7 @@ if (class_exists('WC_Integration')) {
                 $lists = $this->get_companies();
 
                 if (empty($lists)) {
+                    $lists = [];
                     $company_list = array_merge(['' => __('No company found', 'woo-nfe')], $lists);
                 } else {
                     $company_list = array_merge(['' => __('Select a company...', 'woo-nfe')], $lists);
